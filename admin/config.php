@@ -1,25 +1,31 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'http://eat.dev/admin/');
-define('HTTP_CATALOG', 'http://eat.dev/');
+#define('HTTP_SERVER', 'http://eat.dev/admin/');
+define('HTTP_CATALOG', 'http://'.$_SERVER['HTTP_HOST'].'/');
 
 // HTTPS
-define('HTTPS_SERVER', 'http://eat.dev/admin/');
-define('HTTPS_CATALOG', 'http://eat.dev/');
+#define('HTTPS_SERVER', 'http://eat.dev/admin/');
+define('HTTPS_CATALOG', 'http://'.$_SERVER['HTTP_HOST'].'/');
+
+// HTTP
+define('HTTP_SERVER', 'http://'.$_SERVER['HTTP_HOST'].'/');
+
+// HTTPS
+define('HTTPS_SERVER', 'http://'.$_SERVER['HTTP_HOST'].'/');
 
 // DIR
-define('DIR_APPLICATION', 'D:/work/openservser/OpenServer/domains/eat.dev/admin/');
-define('DIR_SYSTEM', 'D:/work/openservser/OpenServer/domains/eat.dev/system/');
-define('DIR_LANGUAGE', 'D:/work/openservser/OpenServer/domains/eat.dev/admin/language/');
-define('DIR_TEMPLATE', 'D:/work/openservser/OpenServer/domains/eat.dev/admin/view/template/');
-define('DIR_CONFIG', 'D:/work/openservser/OpenServer/domains/eat.dev/system/config/');
-define('DIR_IMAGE', 'D:/work/openservser/OpenServer/domains/eat.dev/image/');
-define('DIR_CACHE', 'D:/work/openservser/OpenServer/domains/eat.dev/system/storage/cache/');
-define('DIR_DOWNLOAD', 'D:/work/openservser/OpenServer/domains/eat.dev/system/storage/download/');
-define('DIR_LOGS', 'D:/work/openservser/OpenServer/domains/eat.dev/system/storage/logs/');
-define('DIR_MODIFICATION', 'D:/work/openservser/OpenServer/domains/eat.dev/system/storage/modification/');
-define('DIR_UPLOAD', 'D:/work/openservser/OpenServer/domains/eat.dev/system/storage/upload/');
-define('DIR_CATALOG', 'D:/work/openservser/OpenServer/domains/eat.dev/catalog/');
+define('DIR_APPLICATION', $_SERVER['DOCUMENT_ROOT'] . '/admin/');
+define('DIR_SYSTEM', $_SERVER['DOCUMENT_ROOT'] . '/system/');
+define('DIR_LANGUAGE', $_SERVER['DOCUMENT_ROOT'] . '/admin/language/');
+define('DIR_TEMPLATE', $_SERVER['DOCUMENT_ROOT'] . '/admin/view/template/');
+define('DIR_CONFIG', $_SERVER['DOCUMENT_ROOT'] . '/system/config/');
+define('DIR_IMAGE', $_SERVER['DOCUMENT_ROOT'] . '/image/');
+define('DIR_CACHE', $_SERVER['DOCUMENT_ROOT'] . '/system/storage/cache/');
+define('DIR_DOWNLOAD', $_SERVER['DOCUMENT_ROOT'] . '/system/storage/download/');
+define('DIR_LOGS', $_SERVER['DOCUMENT_ROOT'] . '/system/storage/logs/');
+define('DIR_MODIFICATION', $_SERVER['DOCUMENT_ROOT'] . '/system/storage/modification/');
+define('DIR_UPLOAD', $_SERVER['DOCUMENT_ROOT'] . '/system/storage/upload/');
+define('DIR_CATALOG', $_SERVER['DOCUMENT_ROOT'] . '/catalog/');
 
 // DB
 define('DB_DRIVER', 'mysqli');

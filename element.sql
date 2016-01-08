@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 2.11.11.3
+-- version 4.0.10.10
 -- http://www.phpmyadmin.net
 --
--- Хост: localhost
--- Время создания: Окт 28 2015 г., 16:21
--- Версия сервера: 5.1.69
--- Версия PHP: 5.3.3
+-- Хост: 127.0.0.1:3306
+-- Время создания: Янв 08 2016 г., 15:09
+-- Версия сервера: 5.6.26-log
+-- Версия PHP: 5.6.12
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -16,7 +17,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 /*!40101 SET NAMES utf8 */;
 
 --
--- База данных: `developer_alex_test`
+-- База данных: `element`
 --
 
 -- --------------------------------------------------------
@@ -90,11 +91,6 @@ CREATE TABLE IF NOT EXISTS `oc_affiliate` (
   PRIMARY KEY (`affiliate_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Дамп данных таблицы `oc_affiliate`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -110,11 +106,6 @@ CREATE TABLE IF NOT EXISTS `oc_affiliate_activity` (
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`activity_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
---
--- Дамп данных таблицы `oc_affiliate_activity`
---
-
 
 -- --------------------------------------------------------
 
@@ -134,11 +125,6 @@ CREATE TABLE IF NOT EXISTS `oc_affiliate_login` (
   KEY `ip` (`ip`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Дамп данных таблицы `oc_affiliate_login`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -155,11 +141,6 @@ CREATE TABLE IF NOT EXISTS `oc_affiliate_transaction` (
   PRIMARY KEY (`affiliate_transaction_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Дамп данных таблицы `oc_affiliate_transaction`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -174,7 +155,7 @@ CREATE TABLE IF NOT EXISTS `oc_api` (
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`api_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Дамп данных таблицы `oc_api`
@@ -182,7 +163,8 @@ CREATE TABLE IF NOT EXISTS `oc_api` (
 
 INSERT INTO `oc_api` (`api_id`, `name`, `key`, `status`, `date_added`, `date_modified`) VALUES
 (1, 'Default', 'yZF93ZPID4ZmMnPpp3oSr5yXs2eVBesUY50wXVifwe0eGsKCmtNvtXDHGSSYOfFIr5EEBITp7hCtEqozm4BfzoH2554YslDTCRuoGD0PQQOz2S6lNKKDrvPWghepPOwJXu4TgWmorN4XFQGnlSdgwabvk3Yq4uy49pmHYtAMRMQKEJF4d1DWb0Af2zKwz0CLYoKHqolzFzPjLIwZMmQmfZR1A9CQ7PoiUG6rrudAjvqxttkeIbr8Om872CYmp6QT', 1, '2015-10-26 13:46:40', '2015-10-26 13:46:40'),
-(2, 'Default', 'M90RVTtFZCw3G2vTs9uRNtqBr5LVj9b3PdKrMoOrvwThxJyDM92p2xThMDpTKr4lwda0otK80DYeITVbHJiI5yRz0n7QrGqtqxLT3eafmxxCv541mlC4cmU4zCvo5qm4Ymv6QFxiWqQnLiNzOWGU1Ud8SpdqCS3Y1Jl8VRvrgiYU8QSLeTbBYKXQYcFCqWzvckBvtCt4u6JoGFhfrjwDU2JERNTYc2GZ9opI5Dyo3SZqJeqSqN3vwvX4VIAIIGmm', 1, '2015-10-28 14:43:29', '2015-10-28 14:43:29');
+(2, 'Default', 'M90RVTtFZCw3G2vTs9uRNtqBr5LVj9b3PdKrMoOrvwThxJyDM92p2xThMDpTKr4lwda0otK80DYeITVbHJiI5yRz0n7QrGqtqxLT3eafmxxCv541mlC4cmU4zCvo5qm4Ymv6QFxiWqQnLiNzOWGU1Ud8SpdqCS3Y1Jl8VRvrgiYU8QSLeTbBYKXQYcFCqWzvckBvtCt4u6JoGFhfrjwDU2JERNTYc2GZ9opI5Dyo3SZqJeqSqN3vwvX4VIAIIGmm', 1, '2015-10-28 14:43:29', '2015-10-28 14:43:29'),
+(3, 'Default', 'eiK8ucsTaq0kspveFu8DpbOON2UNHv5iTy4treUm1xJjBqCwgvy86rg42GegOWonRz2xzPtr2GZP2vLyDYnbmWel7WdidlrGLXWUb5OiLa2oHWNFBTGWlpRDYnYMLl9RUHAMlXnWcHykD6ILDcJZi6A8MZke16tumfO24D5t6yaounmD334WEDn7SEJVAUJbROGJCktWqudHXvvWu6NtzNTXAKYkMATsdt7pppgTr73kBMtT9vF63ygd1d8lIQgG', 1, '2016-01-08 13:37:59', '2016-01-08 13:37:59');
 
 -- --------------------------------------------------------
 
@@ -196,11 +178,6 @@ CREATE TABLE IF NOT EXISTS `oc_api_ip` (
   `ip` varchar(40) NOT NULL,
   PRIMARY KEY (`api_ip_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
---
--- Дамп данных таблицы `oc_api_ip`
---
-
 
 -- --------------------------------------------------------
 
@@ -219,11 +196,6 @@ CREATE TABLE IF NOT EXISTS `oc_api_session` (
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`api_session_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
---
--- Дамп данных таблицы `oc_api_session`
---
-
 
 -- --------------------------------------------------------
 
@@ -469,11 +441,6 @@ CREATE TABLE IF NOT EXISTS `oc_cart` (
   KEY `cart_id` (`customer_id`,`session_id`,`product_id`,`recurring_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
---
--- Дамп данных таблицы `oc_cart`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -650,11 +617,6 @@ CREATE TABLE IF NOT EXISTS `oc_category_filter` (
   PRIMARY KEY (`category_id`,`filter_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Дамп данных таблицы `oc_category_filter`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -757,11 +719,6 @@ CREATE TABLE IF NOT EXISTS `oc_category_to_layout` (
   `layout_id` int(11) NOT NULL,
   PRIMARY KEY (`category_id`,`store_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `oc_category_to_layout`
---
-
 
 -- --------------------------------------------------------
 
@@ -1029,7 +986,7 @@ INSERT INTO `oc_country` (`country_id`, `name`, `iso_code_2`, `iso_code_3`, `add
 (186, 'Сейшельские острова', 'SC', 'SYC', '', 0, 1),
 (187, 'Сьерра-Леоне', 'SL', 'SLE', '', 0, 1),
 (188, 'Сингапур', 'SG', 'SGP', '', 0, 1),
-(189, 'Словакия', 'SK', 'SVK', 0x7b66697273746e616d657d207b6c6173746e616d657d0d0a7b636f6d70616e797d0d0a7b616464726573735f317d0d0a7b616464726573735f327d0d0a7b636974797d207b706f7374636f64657d0d0a7b7a6f6e657d0d0a7b636f756e7472797d, 0, 1),
+(189, 'Словакия', 'SK', 'SVK', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city} {postcode}\r\n{zone}\r\n{country}', 0, 1),
 (190, 'Словения', 'SI', 'SVN', '', 0, 1),
 (191, 'Соломоновы острова', 'SB', 'SLB', '', 0, 1),
 (192, 'Сомали', 'SO', 'SOM', '', 0, 1),
@@ -1063,7 +1020,7 @@ INSERT INTO `oc_country` (`country_id`, `name`, `iso_code_2`, `iso_code_3`, `add
 (220, 'Украина', 'UA', 'UKR', '', 0, 1),
 (221, 'Объединенные Арабские Эмираты', 'AE', 'ARE', '', 0, 1),
 (222, 'Великобритания', 'GB', 'GBR', '', 1, 1),
-(223, 'Соединенные Штаты Америки', 'US', 'USA', 0x7b66697273746e616d657d207b6c6173746e616d657d0d0a7b636f6d70616e797d0d0a7b616464726573735f317d0d0a7b616464726573735f327d0d0a7b636974797d2c207b7a6f6e657d207b706f7374636f64657d0d0a7b636f756e7472797d, 0, 1),
+(223, 'Соединенные Штаты Америки', 'US', 'USA', '{firstname} {lastname}\r\n{company}\r\n{address_1}\r\n{address_2}\r\n{city}, {zone} {postcode}\r\n{country}', 0, 1),
 (224, 'Мелкие отдаленные острова США', 'UM', 'UMI', '', 0, 1),
 (225, 'Уругвай', 'UY', 'URY', '', 0, 1),
 (226, 'Узбекистан', 'UZ', 'UZB', '', 0, 1),
@@ -1110,9 +1067,9 @@ CREATE TABLE IF NOT EXISTS `oc_coupon` (
 --
 
 INSERT INTO `oc_coupon` (`coupon_id`, `name`, `code`, `type`, `discount`, `logged`, `shipping`, `total`, `date_start`, `date_end`, `uses_total`, `uses_customer`, `status`, `date_added`) VALUES
-(4, '-10% Discount', '2222', 'P', 10.0000, 0, 0, 0.0000, '2014-01-01', '2020-01-01', 10, '10', 0, '2009-01-27 13:55:03'),
-(5, 'Free Shipping', '3333', 'P', 0.0000, 0, 1, 100.0000, '2014-01-01', '2014-02-01', 10, '10', 0, '2009-03-14 21:13:53'),
-(6, '-10.00 Discount', '1111', 'F', 10.0000, 0, 0, 10.0000, '2014-01-01', '2020-01-01', 100000, '10000', 0, '2009-03-14 21:15:18');
+(4, '-10% Discount', '2222', 'P', '10.0000', 0, 0, '0.0000', '2014-01-01', '2020-01-01', 10, '10', 0, '2009-01-27 13:55:03'),
+(5, 'Free Shipping', '3333', 'P', '0.0000', 0, 1, '100.0000', '2014-01-01', '2014-02-01', 10, '10', 0, '2009-03-14 21:13:53'),
+(6, '-10.00 Discount', '1111', 'F', '10.0000', 0, 0, '10.0000', '2014-01-01', '2020-01-01', 100000, '10000', 0, '2009-03-14 21:15:18');
 
 -- --------------------------------------------------------
 
@@ -1125,11 +1082,6 @@ CREATE TABLE IF NOT EXISTS `oc_coupon_category` (
   `category_id` int(11) NOT NULL,
   PRIMARY KEY (`coupon_id`,`category_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `oc_coupon_category`
---
-
 
 -- --------------------------------------------------------
 
@@ -1147,11 +1099,6 @@ CREATE TABLE IF NOT EXISTS `oc_coupon_history` (
   PRIMARY KEY (`coupon_history_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Дамп данных таблицы `oc_coupon_history`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -1164,11 +1111,6 @@ CREATE TABLE IF NOT EXISTS `oc_coupon_product` (
   `product_id` int(11) NOT NULL,
   PRIMARY KEY (`coupon_product_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
---
--- Дамп данных таблицы `oc_coupon_product`
---
-
 
 -- --------------------------------------------------------
 
@@ -1230,11 +1172,6 @@ CREATE TABLE IF NOT EXISTS `oc_customer` (
   PRIMARY KEY (`customer_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Дамп данных таблицы `oc_customer`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -1250,11 +1187,6 @@ CREATE TABLE IF NOT EXISTS `oc_customer_activity` (
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`activity_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
---
--- Дамп данных таблицы `oc_customer_activity`
---
-
 
 -- --------------------------------------------------------
 
@@ -1311,11 +1243,6 @@ CREATE TABLE IF NOT EXISTS `oc_customer_history` (
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`customer_history_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
---
--- Дамп данных таблицы `oc_customer_history`
---
-
 
 -- --------------------------------------------------------
 
@@ -1379,11 +1306,6 @@ CREATE TABLE IF NOT EXISTS `oc_customer_online` (
   PRIMARY KEY (`ip`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Дамп данных таблицы `oc_customer_online`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -1399,11 +1321,6 @@ CREATE TABLE IF NOT EXISTS `oc_customer_reward` (
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`customer_reward_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
---
--- Дамп данных таблицы `oc_customer_reward`
---
-
 
 -- --------------------------------------------------------
 
@@ -1421,11 +1338,6 @@ CREATE TABLE IF NOT EXISTS `oc_customer_transaction` (
   PRIMARY KEY (`customer_transaction_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Дамп данных таблицы `oc_customer_transaction`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -1438,11 +1350,6 @@ CREATE TABLE IF NOT EXISTS `oc_customer_wishlist` (
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`customer_id`,`product_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `oc_customer_wishlist`
---
-
 
 -- --------------------------------------------------------
 
@@ -1460,11 +1367,6 @@ CREATE TABLE IF NOT EXISTS `oc_custom_field` (
   PRIMARY KEY (`custom_field_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Дамп данных таблицы `oc_custom_field`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -1477,11 +1379,6 @@ CREATE TABLE IF NOT EXISTS `oc_custom_field_customer_group` (
   `required` tinyint(1) NOT NULL,
   PRIMARY KEY (`custom_field_id`,`customer_group_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `oc_custom_field_customer_group`
---
-
 
 -- --------------------------------------------------------
 
@@ -1496,11 +1393,6 @@ CREATE TABLE IF NOT EXISTS `oc_custom_field_description` (
   PRIMARY KEY (`custom_field_id`,`language_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Дамп данных таблицы `oc_custom_field_description`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -1513,11 +1405,6 @@ CREATE TABLE IF NOT EXISTS `oc_custom_field_value` (
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`custom_field_value_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
---
--- Дамп данных таблицы `oc_custom_field_value`
---
-
 
 -- --------------------------------------------------------
 
@@ -1533,11 +1420,6 @@ CREATE TABLE IF NOT EXISTS `oc_custom_field_value_description` (
   PRIMARY KEY (`custom_field_value_id`,`language_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Дамп данных таблицы `oc_custom_field_value_description`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -1552,11 +1434,6 @@ CREATE TABLE IF NOT EXISTS `oc_download` (
   PRIMARY KEY (`download_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Дамп данных таблицы `oc_download`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -1569,11 +1446,6 @@ CREATE TABLE IF NOT EXISTS `oc_download_description` (
   `name` varchar(64) NOT NULL,
   PRIMARY KEY (`download_id`,`language_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `oc_download_description`
---
-
 
 -- --------------------------------------------------------
 
@@ -1647,11 +1519,6 @@ CREATE TABLE IF NOT EXISTS `oc_filter` (
   PRIMARY KEY (`filter_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Дамп данных таблицы `oc_filter`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -1666,11 +1533,6 @@ CREATE TABLE IF NOT EXISTS `oc_filter_description` (
   PRIMARY KEY (`filter_id`,`language_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Дамп данных таблицы `oc_filter_description`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -1682,11 +1544,6 @@ CREATE TABLE IF NOT EXISTS `oc_filter_group` (
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`filter_group_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
---
--- Дамп данных таблицы `oc_filter_group`
---
-
 
 -- --------------------------------------------------------
 
@@ -1700,11 +1557,6 @@ CREATE TABLE IF NOT EXISTS `oc_filter_group_description` (
   `name` varchar(64) NOT NULL,
   PRIMARY KEY (`filter_group_id`,`language_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `oc_filter_group_description`
---
-
 
 -- --------------------------------------------------------
 
@@ -1796,11 +1648,6 @@ CREATE TABLE IF NOT EXISTS `oc_information_to_layout` (
   `layout_id` int(11) NOT NULL,
   PRIMARY KEY (`information_id`,`store_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `oc_information_to_layout`
---
-
 
 -- --------------------------------------------------------
 
@@ -1963,9 +1810,9 @@ CREATE TABLE IF NOT EXISTS `oc_length_class` (
 --
 
 INSERT INTO `oc_length_class` (`length_class_id`, `value`) VALUES
-(1, 1.00000000),
-(2, 10.00000000),
-(3, 0.39370000);
+(1, '1.00000000'),
+(2, '10.00000000'),
+(3, '0.39370000');
 
 -- --------------------------------------------------------
 
@@ -2008,11 +1855,6 @@ CREATE TABLE IF NOT EXISTS `oc_location` (
   PRIMARY KEY (`location_id`),
   KEY `name` (`name`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
---
--- Дамп данных таблицы `oc_location`
---
-
 
 -- --------------------------------------------------------
 
@@ -2080,11 +1922,6 @@ CREATE TABLE IF NOT EXISTS `oc_marketing` (
   PRIMARY KEY (`marketing_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Дамп данных таблицы `oc_marketing`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -2103,11 +1940,6 @@ CREATE TABLE IF NOT EXISTS `oc_modification` (
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`modification_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
---
--- Дамп данных таблицы `oc_modification`
---
-
 
 -- --------------------------------------------------------
 
@@ -2358,11 +2190,6 @@ CREATE TABLE IF NOT EXISTS `oc_order` (
   PRIMARY KEY (`order_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Дамп данных таблицы `oc_order`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -2381,11 +2208,6 @@ CREATE TABLE IF NOT EXISTS `oc_order_custom_field` (
   PRIMARY KEY (`order_custom_field_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Дамп данных таблицы `oc_order_custom_field`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -2401,11 +2223,6 @@ CREATE TABLE IF NOT EXISTS `oc_order_history` (
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`order_history_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
---
--- Дамп данных таблицы `oc_order_history`
---
-
 
 -- --------------------------------------------------------
 
@@ -2424,11 +2241,6 @@ CREATE TABLE IF NOT EXISTS `oc_order_option` (
   `type` varchar(32) NOT NULL,
   PRIMARY KEY (`order_option_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
---
--- Дамп данных таблицы `oc_order_option`
---
-
 
 -- --------------------------------------------------------
 
@@ -2449,11 +2261,6 @@ CREATE TABLE IF NOT EXISTS `oc_order_product` (
   `reward` int(8) NOT NULL,
   PRIMARY KEY (`order_product_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
---
--- Дамп данных таблицы `oc_order_product`
---
-
 
 -- --------------------------------------------------------
 
@@ -2485,11 +2292,6 @@ CREATE TABLE IF NOT EXISTS `oc_order_recurring` (
   PRIMARY KEY (`order_recurring_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Дамп данных таблицы `oc_order_recurring`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -2505,11 +2307,6 @@ CREATE TABLE IF NOT EXISTS `oc_order_recurring_transaction` (
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`order_recurring_transaction_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
---
--- Дамп данных таблицы `oc_order_recurring_transaction`
---
-
 
 -- --------------------------------------------------------
 
@@ -2580,14 +2377,14 @@ CREATE TABLE IF NOT EXISTS `oc_order_total` (
 --
 
 INSERT INTO `oc_order_total` (`order_total_id`, `order_id`, `code`, `title`, `value`, `sort_order`) VALUES
-(1, 1, 'sub_total', 'Сумма', 202.0000, 1),
-(2, 1, 'shipping', 'Фиксированная стоимость доставки', 5.0000, 3),
-(3, 1, 'total', 'Итого', 207.0000, 9),
-(4, 2, 'sub_total', 'Сумма', 101.0000, 1),
-(5, 2, 'shipping', 'Фиксированная стоимость доставки', 5.0000, 3),
-(6, 2, 'tax', 'НДС (20%)', 21.2000, 5),
-(7, 2, 'tax', 'Налог (-2.00)', 4.0000, 5),
-(8, 2, 'total', 'Итого', 131.2000, 9);
+(1, 1, 'sub_total', 'Сумма', '202.0000', 1),
+(2, 1, 'shipping', 'Фиксированная стоимость доставки', '5.0000', 3),
+(3, 1, 'total', 'Итого', '207.0000', 9),
+(4, 2, 'sub_total', 'Сумма', '101.0000', 1),
+(5, 2, 'shipping', 'Фиксированная стоимость доставки', '5.0000', 3),
+(6, 2, 'tax', 'НДС (20%)', '21.2000', 5),
+(7, 2, 'tax', 'Налог (-2.00)', '4.0000', 5),
+(8, 2, 'total', 'Итого', '131.2000', 9);
 
 -- --------------------------------------------------------
 
@@ -2610,11 +2407,6 @@ CREATE TABLE IF NOT EXISTS `oc_order_voucher` (
   `amount` decimal(15,4) NOT NULL,
   PRIMARY KEY (`order_voucher_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
---
--- Дамп данных таблицы `oc_order_voucher`
---
-
 
 -- --------------------------------------------------------
 
@@ -2662,25 +2454,25 @@ CREATE TABLE IF NOT EXISTS `oc_product` (
 --
 
 INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`, `mpn`, `location`, `quantity`, `stock_status_id`, `image`, `manufacturer_id`, `shipping`, `price`, `points`, `tax_class_id`, `date_available`, `weight`, `weight_class_id`, `length`, `width`, `height`, `length_class_id`, `subtract`, `minimum`, `sort_order`, `status`, `viewed`, `date_added`, `date_modified`) VALUES
-(28, 'Product 1', '', '', '', '', '', '', '', 939, 7, 'catalog/demo/htc_touch_hd_1.jpg', 5, 1, 100.0000, 200, 9, '2009-02-03', 146.40000000, 2, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, 0, '2009-02-03 16:06:50', '2011-09-30 01:05:39'),
-(29, 'Product 2', '', '', '', '', '', '', '', 999, 6, 'catalog/demo/palm_treo_pro_1.jpg', 6, 1, 279.9900, 0, 9, '2009-02-03', 133.00000000, 2, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 0, 1, 0, '2009-02-03 16:42:17', '2011-09-30 01:06:08'),
-(30, 'Product 3', '', '', '', '', '', '', '', 7, 6, 'catalog/demo/canon_eos_5d_1.jpg', 9, 1, 100.0000, 0, 9, '2009-02-03', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, 0, '2009-02-03 16:59:00', '2011-09-30 01:05:23'),
-(31, 'Product 4', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/nikon_d300_1.jpg', 0, 1, 80.0000, 0, 9, '2009-02-03', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 0, 1, 0, '2009-02-03 17:00:10', '2011-09-30 01:06:00'),
-(32, 'Product 5', '', '', '', '', '', '', '', 999, 6, 'catalog/demo/ipod_touch_1.jpg', 8, 1, 100.0000, 0, 9, '2009-02-03', 5.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, 0, '2009-02-03 17:07:26', '2011-09-30 01:07:22'),
-(33, 'Product 6', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/samsung_syncmaster_941bw.jpg', 0, 1, 200.0000, 0, 9, '2009-02-03', 5.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, 0, '2009-02-03 17:08:31', '2011-09-30 01:06:29'),
-(34, 'Product 7', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/ipod_shuffle_1.jpg', 8, 1, 100.0000, 0, 9, '2009-02-03', 5.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, 0, '2009-02-03 18:07:54', '2011-09-30 01:07:17'),
-(35, 'Product 8', '', '', '', '', '', '', '', 1000, 5, '', 0, 0, 100.0000, 0, 9, '2009-02-03', 5.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, 0, '2009-02-03 18:08:31', '2011-09-30 01:06:17'),
-(36, 'Product 9', '', '', '', '', '', '', '', 994, 6, 'catalog/demo/ipod_nano_1.jpg', 8, 0, 100.0000, 100, 9, '2009-02-03', 5.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, 0, '2009-02-03 18:09:19', '2011-09-30 01:07:12'),
-(40, 'product 11', '', '', '', '', '', '', '', 967, 5, 'catalog/demo/iphone_1.jpg', 8, 1, 101.0000, 0, 9, '2009-02-03', 10.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, 0, '2009-02-03 21:07:12', '2011-09-30 01:06:53'),
-(41, 'Product 14', '', '', '', '', '', '', '', 977, 5, 'catalog/demo/imac_1.jpg', 8, 1, 100.0000, 0, 9, '2009-02-03', 5.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, 0, '2009-02-03 21:07:26', '2011-09-30 01:06:44'),
-(42, 'Product 15', '', '', '', '', '', '', '', 990, 5, 'catalog/demo/apple_cinema_30.jpg', 8, 1, 100.0000, 400, 9, '2009-02-04', 12.50000000, 1, 1.00000000, 2.00000000, 3.00000000, 1, 1, 2, 0, 1, 0, '2009-02-03 21:07:37', '2011-09-30 00:46:19'),
-(43, 'Product 16', '', '', '', '', '', '', '', 929, 5, 'catalog/demo/macbook_1.jpg', 8, 0, 500.0000, 0, 9, '2009-02-03', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, 0, '2009-02-03 21:07:49', '2011-09-30 01:05:46'),
-(44, 'Product 17', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/macbook_air_1.jpg', 8, 1, 1000.0000, 0, 9, '2009-02-03', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:00', '2011-09-30 01:05:53'),
-(45, 'Product 18', '', '', '', '', '', '', '', 998, 5, 'catalog/demo/macbook_pro_1.jpg', 8, 1, 2000.0000, 0, 100, '2009-02-03', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:17', '2011-09-15 22:22:01'),
-(46, 'Product 19', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/sony_vaio_1.jpg', 10, 1, 1000.0000, 0, 9, '2009-02-03', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:29', '2011-09-30 01:06:39'),
-(47, 'Product 21', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/hp_1.jpg', 7, 1, 100.0000, 400, 9, '2009-02-03', 1.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 0, 1, 0, 1, 0, '2009-02-03 21:08:40', '2011-09-30 01:05:28'),
-(48, 'product 20', 'test 1', '', '', '', '', '', 'test 2', 995, 5, 'catalog/demo/ipod_classic_1.jpg', 8, 1, 100.0000, 0, 9, '2009-02-08', 1.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, 0, '2009-02-08 17:21:51', '2011-09-30 01:07:06'),
-(49, 'SAM1', '', '', '', '', '', '', '', 0, 8, 'catalog/demo/samsung_tab_1.jpg', 0, 1, 199.9900, 0, 9, '2011-04-25', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 1, 1, 0, '2011-04-26 08:57:34', '2011-09-30 01:06:23');
+(28, 'Product 1', '', '', '', '', '', '', '', 939, 7, 'catalog/demo/htc_touch_hd_1.jpg', 5, 1, '100.0000', 200, 9, '2009-02-03', '146.40000000', 2, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 16:06:50', '2011-09-30 01:05:39'),
+(29, 'Product 2', '', '', '', '', '', '', '', 999, 6, 'catalog/demo/palm_treo_pro_1.jpg', 6, 1, '279.9900', 0, 9, '2009-02-03', '133.00000000', 2, '0.00000000', '0.00000000', '0.00000000', 3, 1, 1, 0, 1, 0, '2009-02-03 16:42:17', '2011-09-30 01:06:08'),
+(30, 'Product 3', '', '', '', '', '', '', '', 7, 6, 'catalog/demo/canon_eos_5d_1.jpg', 9, 1, '100.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 16:59:00', '2011-09-30 01:05:23'),
+(31, 'Product 4', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/nikon_d300_1.jpg', 0, 1, '80.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 3, 1, 1, 0, 1, 0, '2009-02-03 17:00:10', '2011-09-30 01:06:00'),
+(32, 'Product 5', '', '', '', '', '', '', '', 999, 6, 'catalog/demo/ipod_touch_1.jpg', 8, 1, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 17:07:26', '2011-09-30 01:07:22'),
+(33, 'Product 6', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/samsung_syncmaster_941bw.jpg', 0, 1, '200.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 17:08:31', '2011-09-30 01:06:29'),
+(34, 'Product 7', '', '', '', '', '', '', '', 1000, 6, 'catalog/demo/ipod_shuffle_1.jpg', 8, 1, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 18:07:54', '2011-09-30 01:07:17'),
+(35, 'Product 8', '', '', '', '', '', '', '', 1000, 5, '', 0, 0, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 18:08:31', '2011-09-30 01:06:17'),
+(36, 'Product 9', '', '', '', '', '', '', '', 994, 6, 'catalog/demo/ipod_nano_1.jpg', 8, 0, '100.0000', 100, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 18:09:19', '2011-09-30 01:07:12'),
+(40, 'product 11', '', '', '', '', '', '', '', 967, 5, 'catalog/demo/iphone_1.jpg', 8, 1, '101.0000', 0, 9, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 21:07:12', '2011-09-30 01:06:53'),
+(41, 'Product 14', '', '', '', '', '', '', '', 977, 5, 'catalog/demo/imac_1.jpg', 8, 1, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 21:07:26', '2011-09-30 01:06:44'),
+(42, 'Product 15', '', '', '', '', '', '', '', 990, 5, 'catalog/demo/apple_cinema_30.jpg', 8, 1, '100.0000', 400, 9, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 2, 0, 1, 0, '2009-02-03 21:07:37', '2011-09-30 00:46:19'),
+(43, 'Product 16', '', '', '', '', '', '', '', 929, 5, 'catalog/demo/macbook_1.jpg', 8, 0, '500.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:07:49', '2011-09-30 01:05:46'),
+(44, 'Product 17', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/macbook_air_1.jpg', 8, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:00', '2011-09-30 01:05:53'),
+(45, 'Product 18', '', '', '', '', '', '', '', 998, 5, 'catalog/demo/macbook_pro_1.jpg', 8, 1, '2000.0000', 0, 100, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:17', '2011-09-15 22:22:01'),
+(46, 'Product 19', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/sony_vaio_1.jpg', 10, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:29', '2011-09-30 01:06:39'),
+(47, 'Product 21', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/hp_1.jpg', 7, 1, '100.0000', 400, 9, '2009-02-03', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 0, 1, 0, 1, 0, '2009-02-03 21:08:40', '2011-09-30 01:05:28'),
+(48, 'product 20', 'test 1', '', '', '', '', '', 'test 2', 995, 5, 'catalog/demo/ipod_classic_1.jpg', 8, 1, '100.0000', 0, 9, '2009-02-08', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-08 17:21:51', '2011-09-30 01:07:06'),
+(49, 'SAM1', '', '', '', '', '', '', '', 0, 8, 'catalog/demo/samsung_tab_1.jpg', 0, 1, '199.9900', 0, 9, '2011-04-25', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2011-04-26 08:57:34', '2011-09-30 01:06:23');
 
 -- --------------------------------------------------------
 
@@ -2800,9 +2592,9 @@ CREATE TABLE IF NOT EXISTS `oc_product_discount` (
 --
 
 INSERT INTO `oc_product_discount` (`product_discount_id`, `product_id`, `customer_group_id`, `quantity`, `priority`, `price`, `date_start`, `date_end`) VALUES
-(440, 42, 1, 30, 1, 66.0000, '0000-00-00', '0000-00-00'),
-(439, 42, 1, 20, 1, 77.0000, '0000-00-00', '0000-00-00'),
-(438, 42, 1, 10, 1, 88.0000, '0000-00-00', '0000-00-00');
+(440, 42, 1, 30, 1, '66.0000', '0000-00-00', '0000-00-00'),
+(439, 42, 1, 20, 1, '77.0000', '0000-00-00', '0000-00-00'),
+(438, 42, 1, 10, 1, '88.0000', '0000-00-00', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -2815,11 +2607,6 @@ CREATE TABLE IF NOT EXISTS `oc_product_filter` (
   `filter_id` int(11) NOT NULL,
   PRIMARY KEY (`product_id`,`filter_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `oc_product_filter`
---
-
 
 -- --------------------------------------------------------
 
@@ -2964,22 +2751,22 @@ CREATE TABLE IF NOT EXISTS `oc_product_option_value` (
 --
 
 INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_option_id`, `product_id`, `option_id`, `option_value_id`, `quantity`, `subtract`, `price`, `price_prefix`, `points`, `points_prefix`, `weight`, `weight_prefix`) VALUES
-(1, 217, 42, 5, 41, 100, 0, 1.0000, '+', 0, '+', 1.00000000, '+'),
-(6, 218, 42, 1, 31, 146, 1, 20.0000, '+', 2, '-', 20.00000000, '+'),
-(7, 218, 42, 1, 43, 300, 1, 30.0000, '+', 3, '+', 30.00000000, '+'),
-(5, 218, 42, 1, 32, 96, 1, 10.0000, '+', 1, '+', 10.00000000, '+'),
-(4, 217, 42, 5, 39, 92, 1, 4.0000, '+', 0, '+', 4.00000000, '+'),
-(2, 217, 42, 5, 42, 200, 1, 2.0000, '+', 0, '+', 2.00000000, '+'),
-(3, 217, 42, 5, 40, 300, 0, 3.0000, '+', 0, '+', 3.00000000, '+'),
-(8, 223, 42, 2, 23, 48, 1, 10.0000, '+', 0, '+', 10.00000000, '+'),
-(10, 223, 42, 2, 44, 2696, 1, 30.0000, '+', 0, '+', 30.00000000, '+'),
-(9, 223, 42, 2, 24, 194, 1, 20.0000, '+', 0, '+', 20.00000000, '+'),
-(11, 223, 42, 2, 45, 3998, 1, 40.0000, '+', 0, '+', 40.00000000, '+'),
-(12, 224, 35, 11, 46, 0, 1, 5.0000, '+', 0, '+', 0.00000000, '+'),
-(13, 224, 35, 11, 47, 10, 1, 10.0000, '+', 0, '+', 0.00000000, '+'),
-(14, 224, 35, 11, 48, 15, 1, 15.0000, '+', 0, '+', 0.00000000, '+'),
-(16, 226, 30, 5, 40, 5, 1, 0.0000, '+', 0, '+', 0.00000000, '+'),
-(15, 226, 30, 5, 39, 2, 1, 0.0000, '+', 0, '+', 0.00000000, '+');
+(1, 217, 42, 5, 41, 100, 0, '1.0000', '+', 0, '+', '1.00000000', '+'),
+(6, 218, 42, 1, 31, 146, 1, '20.0000', '+', 2, '-', '20.00000000', '+'),
+(7, 218, 42, 1, 43, 300, 1, '30.0000', '+', 3, '+', '30.00000000', '+'),
+(5, 218, 42, 1, 32, 96, 1, '10.0000', '+', 1, '+', '10.00000000', '+'),
+(4, 217, 42, 5, 39, 92, 1, '4.0000', '+', 0, '+', '4.00000000', '+'),
+(2, 217, 42, 5, 42, 200, 1, '2.0000', '+', 0, '+', '2.00000000', '+'),
+(3, 217, 42, 5, 40, 300, 0, '3.0000', '+', 0, '+', '3.00000000', '+'),
+(8, 223, 42, 2, 23, 48, 1, '10.0000', '+', 0, '+', '10.00000000', '+'),
+(10, 223, 42, 2, 44, 2696, 1, '30.0000', '+', 0, '+', '30.00000000', '+'),
+(9, 223, 42, 2, 24, 194, 1, '20.0000', '+', 0, '+', '20.00000000', '+'),
+(11, 223, 42, 2, 45, 3998, 1, '40.0000', '+', 0, '+', '40.00000000', '+'),
+(12, 224, 35, 11, 46, 0, 1, '5.0000', '+', 0, '+', '0.00000000', '+'),
+(13, 224, 35, 11, 47, 10, 1, '10.0000', '+', 0, '+', '0.00000000', '+'),
+(14, 224, 35, 11, 48, 15, 1, '15.0000', '+', 0, '+', '0.00000000', '+'),
+(16, 226, 30, 5, 40, 5, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(15, 226, 30, 5, 39, 2, 1, '0.0000', '+', 0, '+', '0.00000000', '+');
 
 -- --------------------------------------------------------
 
@@ -2993,11 +2780,6 @@ CREATE TABLE IF NOT EXISTS `oc_product_recurring` (
   `customer_group_id` int(11) NOT NULL,
   PRIMARY KEY (`product_id`,`recurring_id`,`customer_group_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `oc_product_recurring`
---
-
 
 -- --------------------------------------------------------
 
@@ -3083,9 +2865,9 @@ CREATE TABLE IF NOT EXISTS `oc_product_special` (
 --
 
 INSERT INTO `oc_product_special` (`product_special_id`, `product_id`, `customer_group_id`, `priority`, `price`, `date_start`, `date_end`) VALUES
-(419, 42, 1, 1, 90.0000, '0000-00-00', '0000-00-00'),
-(439, 30, 1, 2, 90.0000, '0000-00-00', '0000-00-00'),
-(438, 30, 1, 1, 80.0000, '0000-00-00', '0000-00-00');
+(419, 42, 1, 1, '90.0000', '0000-00-00', '0000-00-00'),
+(439, 30, 1, 2, '90.0000', '0000-00-00', '0000-00-00'),
+(438, 30, 1, 1, '80.0000', '0000-00-00', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -3148,11 +2930,6 @@ CREATE TABLE IF NOT EXISTS `oc_product_to_download` (
   PRIMARY KEY (`product_id`,`download_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Дамп данных таблицы `oc_product_to_download`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -3165,11 +2942,6 @@ CREATE TABLE IF NOT EXISTS `oc_product_to_layout` (
   `layout_id` int(11) NOT NULL,
   PRIMARY KEY (`product_id`,`store_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `oc_product_to_layout`
---
-
 
 -- --------------------------------------------------------
 
@@ -3230,11 +3002,6 @@ CREATE TABLE IF NOT EXISTS `oc_recurring` (
   PRIMARY KEY (`recurring_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Дамп данных таблицы `oc_recurring`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -3247,11 +3014,6 @@ CREATE TABLE IF NOT EXISTS `oc_recurring_description` (
   `name` varchar(255) NOT NULL,
   PRIMARY KEY (`recurring_id`,`language_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `oc_recurring_description`
---
-
 
 -- --------------------------------------------------------
 
@@ -3281,11 +3043,6 @@ CREATE TABLE IF NOT EXISTS `oc_return` (
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`return_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
---
--- Дамп данных таблицы `oc_return`
---
-
 
 -- --------------------------------------------------------
 
@@ -3327,11 +3084,6 @@ CREATE TABLE IF NOT EXISTS `oc_return_history` (
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`return_history_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
---
--- Дамп данных таблицы `oc_return_history`
---
-
 
 -- --------------------------------------------------------
 
@@ -3407,11 +3159,6 @@ CREATE TABLE IF NOT EXISTS `oc_review` (
   KEY `product_id` (`product_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Дамп данных таблицы `oc_review`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -3426,7 +3173,7 @@ CREATE TABLE IF NOT EXISTS `oc_setting` (
   `value` text NOT NULL,
   `serialized` tinyint(1) NOT NULL,
   PRIMARY KEY (`setting_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=640 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=644 ;
 
 --
 -- Дамп данных таблицы `oc_setting`
@@ -3477,7 +3224,7 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (626, 0, 'config', 'config_secure', '0', 0),
 (627, 0, 'config', 'config_password', '1', 0),
 (628, 0, 'config', 'config_shared', '0', 0),
-(638, 0, 'config', 'config_encryption', '7czbc0JYhgtJn28YAksIp0jCzyIBDopD6bhCsDg2UCndFyexIqeaXIk7hBFTDtyZr6vsvQ4wUzSUGN7nZkD711FVwkZwTUKgy9MCieMeNg8HttshVPIHtjqc6ISlH4b7JJqEASZL5JwUZwpfaicZJ7SPpEGbh4Tl2CSmzaJXpBW31m6Z91GaiEASjVeYxkYG5gvNhbEPHhhXfUudJWd0C3G9bS5I9tiLlRmwlhyQ0oA1bxqwGXzTdqN0Lyt1aSsui1yrFy3MV5JG8g0hgfzf4dLEhye92Krfdc5zWosJWin4GmScyyiQHGasIZixDApDlFxGpsZNdtyalu0iAJA66l6Z96Zx1bsAFkuhuPAH2ZBQZ7LWVYMRJkXTemHWySF9VCAhSWQ6nLQd1L5p85we7rGfIF2RXgxjzSYr0EvEQPW8xBIzZixorvCpKwf7wZvL2py3wu8DdjopD8dXq7Wtis0whE9sV7rEL6sHF6U9c7uGSx7VV6jIkYC0KPOuN0htHViWYgiXg90M1Q8cwWr92KDFFLdZee7VKGEAO17ZC7TVO85uentbCXL6AStBUBKM36V9Fbi977UnM1yOQD5vXLqmYkTohs3fbcnab8WO5xU1JNW8mZMZxLMA6KQLfVe2Do8Ft2sDxusLK6iAlN0XHTnzu4XLDOK68vOj82wJI9qZd49t0BoBPQXqpE5NA7Eg5748gt0QTeR1CY84OtIt9tJ27NcyGRjrINwoDu2jfezVtWbQqFYLEZSFDKeyHcnmPk3lZ3Y99E1bN36XZM3ZYsKxwhGD7d0yDtSnTir58vaenQVg0tyVleRF5tonTlL4d9IuKwpba0MfRGBjZ1KknLPCwwqBhoyZcWBGHYEgyY0PVDppeftTJWTFurup8XztX4GnpUbkdmuy7bsD87HPET7sJY7qBnPbwGNQ4OFWDm9r2xzjIjBPiFDAykbRaEGpl27ht970PxvadlIYsmXUO22YCCHisFBYVzNo0d1nhbfDagcmdOK7x7uuWNxzqe4Z', 0),
+(642, 0, 'config', 'config_encryption', 'Y6zgempWgQl5asnym4RBLBhoKc9bxQowmn3THXkoaLFE8Gw6e22Xr1NhXjTiOXdtmWyH8eoyxrcLObsJSy5BFkhHweqpPEbJZhOjXAO6tEsJqBfdtpZ1RYSfE2wSrLSg2kf9ooWxHgUUSoVDv2Q88aDqlbOfhEdFa3Jcafb3lNJ7l01xVX1f2nD1KvJQ8vE5tVQNYRvaaMH9kmnm6OQgZ8FZRdev99EEw7T5IfrUloqn2F0gHrPGNO9hfNuGF6NhhuHz3UpapqUtVsA9saDZWi5ch74CllGGC1uulTNoyPVBzKnaAsx6qcCTP0hT1YdE0llk9zATJIWuqdawq84p8ID18L25aFfGhRTA0YNpTlKWzg7lh3WDW7tAZzue20mWswOAyZiqAq43dewFsiJz9HDbDMMOo1BTTPYx2KKktwNiVbCt6TVoPbVaNdDlTXnAJCWhEUqWJgAb1Bzkg4SLgorC2uRspDF7FwFazJIki5kILgBgL7OF5GdqSpTJy56MHy9iWq7ekgbJSq5b4KuIHgLTUggfurySbuxQnyez2RdjoeiYz8m5cm7zm6vCXytQ6VxqXIx7Xpym7Z3G9mixEM62YP3Rihaoni41CpD4YtCjStiVwIzqANbFdpztHslfewVjBl8pq2aY4ZmiF8gEOo3BZxRsUI0Mibec4xOxYxKDbtNIN0eCAgDDpm4Edkhwdo8sU7nW0KbORwW1ZHr8cd28671lShrU6HB26XhTiYu96LOmZmtE7bBVVAKvVKNOSlcTQewrT9wsNRHBAquUKwO5MFLhwgBwl5siWJkjoH66R6BsESYe9XJ0nO1ZaCRo9EGghYdifxWhIQRiwNiNv5uRNFyeNciY7hBBN23ylPE3SwBtj4FJWk0MnkNKubkv1uHk92Mba0q5LKtZThgIyZ0zWxdpROOaIHnrWENgLKKGDtcGFiweKByMpYsyN1tedVM3O3xt6XC3tQPtCPDpwlWwblhEw9XE2S4mvBcmB3eGJGBJYXYTx8XoiVJ50GL8', 0),
 (621, 0, 'config', 'config_mail_alert', '', 0),
 (622, 0, 'config', 'config_maintenance', '0', 0),
 (623, 0, 'config', 'config_seo_url', '0', 0),
@@ -3528,7 +3275,7 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (577, 0, 'config', 'config_affiliate_approval', '0', 0),
 (575, 0, 'config', 'config_stock_warning', '0', 0),
 (574, 0, 'config', 'config_stock_display', '0', 0),
-(639, 0, 'config', 'config_api_id', '2', 0),
+(643, 0, 'config', 'config_api_id', '3', 0),
 (572, 0, 'config', 'config_order_mail', '0', 0),
 (571, 0, 'config', 'config_fraud_status_id', '7', 0),
 (569, 0, 'config', 'config_processing_status', '["5","1","2","12","3"]', 1),
@@ -3570,7 +3317,7 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (534, 0, 'config', 'config_image', '', 0),
 (533, 0, 'config', 'config_fax', '', 0),
 (532, 0, 'config', 'config_telephone', '123456789', 0),
-(636, 0, 'config', 'config_email', 'alexandr.petrov@b-leader.ru', 0),
+(640, 0, 'config', 'config_email', 'bib50@spaces.ru', 0),
 (530, 0, 'config', 'config_geocode', '', 0),
 (529, 0, 'config', 'config_address', 'Address 1', 0),
 (528, 0, 'config', 'config_owner', 'Your Name', 0),
@@ -3580,7 +3327,7 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `code`, `key`, `value`, `ser
 (524, 0, 'config', 'config_meta_keyword', '', 0),
 (523, 0, 'config', 'config_meta_description', 'My Store', 0),
 (522, 0, 'config', 'config_meta_title', 'Your Store', 0),
-(637, 0, 'config', 'config_url', 'http://t-leader.ru/alex/test/', 0);
+(641, 0, 'config', 'config_url', 'http://eat.dev/', 0);
 
 -- --------------------------------------------------------
 
@@ -3622,11 +3369,6 @@ CREATE TABLE IF NOT EXISTS `oc_store` (
   `ssl` varchar(255) NOT NULL,
   PRIMARY KEY (`store_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
---
--- Дамп данных таблицы `oc_store`
---
-
 
 -- --------------------------------------------------------
 
@@ -3673,8 +3415,8 @@ CREATE TABLE IF NOT EXISTS `oc_tax_rate` (
 --
 
 INSERT INTO `oc_tax_rate` (`tax_rate_id`, `geo_zone_id`, `name`, `rate`, `type`, `date_added`, `date_modified`) VALUES
-(86, 3, 'НДС (20%)', 20.0000, 'P', '2011-03-09 21:17:10', '2011-09-22 22:24:29'),
-(87, 3, 'Налог (-2.00)', 2.0000, 'F', '2011-09-21 21:49:23', '2011-09-23 00:40:19');
+(86, 3, 'НДС (20%)', '20.0000', 'P', '2011-03-09 21:17:10', '2011-09-22 22:24:29'),
+(87, 3, 'Налог (-2.00)', '2.0000', 'F', '2011-09-21 21:49:23', '2011-09-23 00:40:19');
 
 -- --------------------------------------------------------
 
@@ -3735,11 +3477,6 @@ CREATE TABLE IF NOT EXISTS `oc_upload` (
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`upload_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
---
--- Дамп данных таблицы `oc_upload`
---
-
 
 -- --------------------------------------------------------
 
@@ -3857,7 +3594,7 @@ CREATE TABLE IF NOT EXISTS `oc_user` (
 --
 
 INSERT INTO `oc_user` (`user_id`, `user_group_id`, `username`, `password`, `salt`, `firstname`, `lastname`, `email`, `image`, `code`, `ip`, `status`, `date_added`) VALUES
-(1, 1, 'admin', '0eb089f3f72718997ef97fbf9a53264a42b00cd4', 'rJnPZP5oa', 'John', 'Doe', 'alexandr.petrov@b-leader.ru', '', '', '188.138.120.158', 1, '2015-10-28 14:43:29');
+(1, 1, 'admin', '2356a412a635762fc2a70f4102b5efb5d0e3e0dd', 'NbSXCH6Xf', 'John', 'Doe', 'bib50@spaces.ru', '', '', '', 1, '2016-01-08 13:37:59');
 
 -- --------------------------------------------------------
 
@@ -3902,11 +3639,6 @@ CREATE TABLE IF NOT EXISTS `oc_voucher` (
   PRIMARY KEY (`voucher_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Дамп данных таблицы `oc_voucher`
---
-
-
 -- --------------------------------------------------------
 
 --
@@ -3921,11 +3653,6 @@ CREATE TABLE IF NOT EXISTS `oc_voucher_history` (
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`voucher_history_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
---
--- Дамп данных таблицы `oc_voucher_history`
---
-
 
 -- --------------------------------------------------------
 
@@ -3990,10 +3717,10 @@ CREATE TABLE IF NOT EXISTS `oc_weight_class` (
 --
 
 INSERT INTO `oc_weight_class` (`weight_class_id`, `value`) VALUES
-(1, 1.00000000),
-(2, 1000.00000000),
-(5, 2.20460000),
-(6, 35.27400000);
+(1, '1.00000000'),
+(2, '1000.00000000'),
+(5, '2.20460000'),
+(6, '35.27400000');
 
 -- --------------------------------------------------------
 
@@ -8105,3 +7832,7 @@ INSERT INTO `oc_zone_to_geo_zone` (`zone_to_geo_zone_id`, `country_id`, `zone_id
 (107, 222, 3954, 3, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (108, 222, 3955, 3, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (109, 222, 3972, 3, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
